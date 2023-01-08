@@ -1,0 +1,86 @@
+.headerContainer {
+  background-color: #1a1891;
+  padding: 0.7rem 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 100vw;
+  margin: 0 auto;
+}
+.headerContainer ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+  margin: 0 auto;
+}
+.headerContainer ul li {
+  list-style: none;
+}
+
+.headerContainer ul li a {
+  background-image: linear-gradient(
+    to right,
+    #54b3d6,
+    #54b3d6 50%,
+    rgb(255, 255, 255) 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+.headerContainer ul li a::before {
+  content: "";
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  top: -51px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  overflow: hidden;
+}
+.headerContainer ul li a:hover {
+  background-position: 0;
+  overflow: hidden;
+}
+.headerContainer ul li a:hover::before {
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.watched {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.watched li {
+  margin: 0 15px;
+}
+.willwatch a {
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 10px;
+  list-style: none;
+}
+.button {
+  color: white;
+  font-size: 2rem;
+  background-color: #47a9eb;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.headerContainer .button a {
+  -webkit-text-fill-color: whitesmoke;
+}
+.button:hover {
+  transform: scale(1.1);
+}
